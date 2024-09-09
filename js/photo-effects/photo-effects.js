@@ -20,7 +20,7 @@ function decreaseSize () {
   if (newScaleControlValue > SCALE.MIN) {
     newScaleControlValue -= SCALE.STEP;
     imgUploadPreview.style.transform = `scale(${newScaleControlValue / 100})`;
-    scaleControlValue.value = `${newScaleControlValue} %`;
+    scaleControlValue.setAttribute('value', `${newScaleControlValue} %`);
   }
 }
 
@@ -33,7 +33,7 @@ function increaseSize () {
   if (newScaleControlValue < SCALE.MAX) {
     newScaleControlValue += SCALE.STEP;
     imgUploadPreview.style.transform = `scale(${newScaleControlValue / 100})`;
-    scaleControlValue.value = `${newScaleControlValue} %`;
+    scaleControlValue.setAttribute('value', `${newScaleControlValue} %`);
   }
 }
 const clearScale = function () {
